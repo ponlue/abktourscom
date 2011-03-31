@@ -49,8 +49,8 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	
 	 #thumimage {
 	position:absolute;
-	left:256px;
-	top:388px;
+	left:604px;
+	top:465px;
 	width:435px;
 	height:42px;
 	z-index:11;
@@ -67,7 +67,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				<div id="header_l">
 					<div id="header_r">
                     	
-						<!--<div id="logo"></div>-->
+						<div id="logo"></div>
 						<jdoc:include type="modules" name="top" />
                         
   <!--Language French and English===========================================-->
@@ -81,14 +81,18 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				</div>
 			</div>
 
-			<div style="width:100%;">
+			<div id="tabarea">
+				<div id="tabarea_l">
+					<div id="tabarea_r">
+						<div id="tabmenu">
 						<table cellpadding="0" cellspacing="0" class="pill" width="100%">
 							<tr>
-								<td>&nbsp;</td>
-								<td>
-							
+								<td class="pill_l">&nbsp;</td>
+								<td class="pill_m">
+								<div id="pillmenu" style="margin-left:-4px;margin-right:-18px;">
+									<jdoc:include type="modules" name="user3" />
   <!--menu dropdown ===========================================-->
-<div style="border-top:solid 1px #FFF;border-bottom:solid 1px #FFF;">
+                                    	<div style="width:99%;border-top:solid 1px #FFF;border-bottom:solid 1px #FFF;">
 <?php
 
 if(isset($_GET['lang'])) $lang=$_GET['lang'];
@@ -174,49 +178,50 @@ echo'
 </div>';
 ?>
 </div>
-                         
+
+                                    
+								</div>
 								</td>
 								<td class="pill_r">&nbsp;</td>
 							</tr>
                             <tr><td colspan="3">
                             <div style="width:100%;height:390px;background-color:#86B240;padding-top:25px;">
-      				<img src="image_slide/10.jpg" id="pic" style="width:80%;height:350px;border:solid #000 1px;" />
-                                
-                                
-                                
-                                
-				<div style="margin-top:-20px;z-index:1000">
-                                 
-                                 
-                                 
-                                 
-        				<img src="images/play_48.png" style="height:20px; width:20px;" onclick="playSlide()"/>
-       					<img src="images/pause_48.png" style="height:20px; width:20px;" onclick="puaseSlide()" />
+      								<img src="image_slide/10.jpg" id="pic" style="width:80%;height:350px;border:solid #000 1px;" />
+                                       <div id="thumimage">
+        									<img src="images/play_48.png" style="height:20px; width:20px;" onclick="playSlide()"/>
+       										<img src="images/pause_48.png" style="height:20px; width:20px;" onclick="puaseSlide()" />
         									                                            
-		 <?php 
-          $images = scandir(realpath('images/image_slide/'));
-          foreach ($images as $image)
-          {
-              if (substr($image, 0, 1) != '.') 
-              {
-                  $extension = substr($image, strrpos($image, '.')); // Gets the File Extension
-                  if($extension == ".jpg" || $extension == ".jpeg" || $extension == ".gif" |$extension == ".png")
-                  echo "<img src=\"images/image_slide/$image\" width=\"30\" height=\"30\" 
-                          onclick=\"currentPic('images/image_slide/$image')\"/>&nbsp;";
-              }
-              
-          }
-         ?>                                            
-  </div>
+                                               <?php 
+												$images = scandir(realpath('images/image_slide/'));
+												foreach ($images as $image)
+												{
+													if (substr($image, 0, 1) != '.') 
+													{
+														$extension = substr($image, strrpos($image, '.')); // Gets the File Extension
+														if($extension == ".jpg" || $extension == ".jpeg" || $extension == ".gif" |$extension == ".png")
+														echo "<img src=\"images/image_slide/$image\" width=\"30\" height=\"30\" 
+														        onclick=\"currentPic('images/image_slide/$image')\"/>&nbsp;";
+													}
+													
+												}
+ 											   ?>                                            
+                                      </div>
                                    
-                                
+                                      
+        							&nbsp;
+        						<div style="margin-top:5px;;padding-right:60px; text-align:right;display:block">
+       							<input name="" type="text" value="Search" size="40" style="font-size:16px;background:#86B240;border:solid 1px #060"> &nbsp;
+        							<!--<a href="#"><img src="images/search_48.png" width="25" height="25"></a>-->
+        						<input type="button" value="Search" style="background:url(images/search_48.gif) no-repeat;font-size:15px; border:outset 1px #060"/>		
+   								</div>
 							</div>
                             
                             </td></tr>
 							</table>
 						</div>
-				
-			
+					</div>
+				</div>
+			</div>
 
 		
 
@@ -226,68 +231,62 @@ echo'
 				<div id="whitebox_m">
                 <br /><br />
                 <div id="content">
-               		<div style="float:left;width:68%;"  style="">
+               		<div style="float:left;width:70%;padding-left:20px;">
 					<!--<jdoc:include type="modules" name="left" style="rounded" />-->
-           
-                             
- 						  <?php 	$db =& JFactory::getDBO();   
+                        
+                             <?php 	$db =& JFactory::getDBO();   
                           	$query = "SELECT title,introtext FROM jos_content";
 							$db=mysql_query($query);
 							while(list($title,$text)=mysql_fetch_row($db))
 							{
-									echo"<p><span>".$title."</span></p><br />";
-								echo "<div style='font-size:13px;color:#666;word-spacing:1px;line-height:18px;'>".$text."&nbsp;&nbsp;<a hret='' style='background:red;color:#fff' >Read More...</a></div><br />";
+								echo"<p><span>".$title."</span></p>";
+								echo "<div style='font-size:13px;color:#666;word-spacing:1px;line-height:18px;'>".$text."</div><br /><br />";
 								
 							}
 							 ?>
+                             
+
                            </div>
-                          <div style="float:right;width:29%">  
-                       		 <div style="height:730px;background-color:#86B240;padding:10px;">
+                          <div style="float:right;width:26%">  
+                       		 <div style="height:700px;background-color:#86B240;padding:10px;">
                         
                             		<span>Scription</span><br /><br />
                                     
                                     <table style="color:#000">
                                     	<tr>
                                         	<td>Name:</td>
-                                            <td><input type="text" name="name" size="30px;" /></td>
+                                            <td><input type="text" name="name" size="35px;" /></td>
                                         </tr>
                                         <tr>
                                         	<td>Email:</td>
-                                            <td><input type="text" name="name" size="30px;" /></td>
+                                            <td><input type="text" name="name" size="35px;" /></td>
                                         </tr>
-                                        <tr>
-                                        	<td>Discription</td>
-                                        </tr>
+                                        
                                          <tr>
-                                        	<td colspan="2">
-                                            	<textarea cols="30" rows="5" name="Description"> </textarea>
-                                            </td>
-                                         <tr><td><input type="button" value="send"</td></tr>
+                                        	<td>Discription:</td>
+                                            <td><textarea cols="30" rows="5" name="Description"> </textarea></td>
+                                         
                                         </tr>
                                     </table>
-                                    <br /><br />
+                                    <br /><br /><br /><br />
                                     
                                     <p><span>Cambodai the land of wonder</span></p><br />
                                     <!--Images =======================================-->
                                     <div>
                                      <?php 
-									
 												$images = scandir(realpath('images/Lan_of_wonder/'));
-												
 												echo"<center><table>";
 												$i=0;
 												foreach ($images as $image)
 												{
 													if (substr($image, 0, 1) != '.') 
 													{
-														$extension = substr($image, strrpos($image, '.')); 
-														if($extension == ".jpg" || $extension == ".jpeg" 
-														||$extension == ".gif" ||$extension == ".png")
+														$extension = substr($image, strrpos($image, '.')); // Gets the File Extension
+														if($extension == ".jpg" || $extension == ".jpeg" || $extension == ".gif" |$extension == ".png")
 														{
 															$i=$i+1;
-															$im=$im."<td style='padding:3px;'>
-															<img src=\"images/Lan_of_wonder/$image\" 
-															width='120' height='70' /></td>";
+															$im=$im."<td style='padding:3px;'><img src=\"images/Lan_of_wonder/$image\" width=\"135\" height=\"70\" 
+																	 /></td>";
 															if ($i==2){$i=0;echo "<tr>".$im."</tr>";$im="";}
 														}
 													}
@@ -297,7 +296,7 @@ echo'
  											   ?>    
                                      </div>  
                                      
-                                     <br /><br />
+                                     <br /><br /><br />
                                      <p><span>Number of Visiter</span></p><br />
                                   	 <table style="color:#fff;font-size:16px;">
                                      	<tr><td style="padding:5px;">- Yester day :</td><td>0</td></tr>
