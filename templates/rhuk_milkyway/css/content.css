@@ -61,14 +61,27 @@ div#content div.content_left p a span
 	border:none;
 	font-size:12px;
 }
-img
+div#content img
 {
 	border:solid #CCC 2px;
-	 /*border:1px solid;
+	 /*border:1px solid;*/
 		-moz-border-radius:5px;
 		border-radius:5px;*/
 }
-img:hover
+div#content img:hover 
+{
+	border:solid #FC0 2px;
+	opacity:0.8;filter:alpha(opacity=80);
+}
+
+div#content_footer img
+{
+	border:solid #CCC 2px;
+	 /*border:1px solid;*/
+		-moz-border-radius:5px;
+		border-radius:5px;*/
+}
+div#content_footer img:hover 
 {
 	border:solid #FC0 2px;
 	opacity:0.8;filter:alpha(opacity=80);

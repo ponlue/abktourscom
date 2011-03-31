@@ -235,8 +235,8 @@ echo'
 							$db=mysql_query($query);
 							while(list($title,$text)=mysql_fetch_row($db))
 							{
-									echo"<p><span>".$title."</span></p><br />";
-								echo "<div style='font-size:13px;color:#666;word-spacing:1px;line-height:18px;'>".$text."&nbsp;&nbsp;<a hret='' style='background:red;color:#fff' >Read More...</a></div><br />";
+								echo"<p><span>".$title."</span></p><br />";
+								echo "<div style='font-size:13px;color:#666;word-spacing:1px;line-height:18px;'>".$text."&nbsp;&nbsp;&nbsp;&nbsp;<a hret='' style='background:red;color:#fff' >Read More...</a></div><br />";
 								
 							}
 							 ?>
@@ -262,7 +262,7 @@ echo'
                                         	<td colspan="2">
                                             	<textarea cols="30" rows="5" name="Description"> </textarea>
                                             </td>
-                                         <tr><td><input type="button" value="send"</td></tr>
+                                         <tr><td><input type="button" value="Send" /></td></tr>
                                         </tr>
                                     </table>
                                     <br /><br />
@@ -329,7 +329,7 @@ echo'
 </div>
 
 
- <div style="margin-top:-225px;" align="center">
+ <div id="content_footer" style="margin-top:-225px;" align="center">
 	
     <p><span style="color:#00F;border-bottom:double 4px #F00;font-size:16px;">Cambodia Photo</span></p><br />
        <?php 
