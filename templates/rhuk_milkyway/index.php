@@ -15,7 +15,11 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
 <head>
-<jdoc:include type="head" />
+
+<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseurl ?>/file_read_more/highslide-with-html.js"></script>
+
+<link rel="stylesheet" type="text/css" href="<?php echo $this->baseurl ?>/file_read_more/highslide.css" />
 
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
@@ -24,8 +28,6 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/css/content.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/js/ie6.js" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/css/slide.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/js/jquery.js" type="text/css" />
-<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/js/scripts.js" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/css/<?php echo $this->params->get('colorVariation'); ?>.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/rhuk_milkyway/css/<?php echo $this->params->get('backgroundVariation'); ?>_bg.css" type="text/css" />
 <!--[if lte IE 6]>
@@ -57,6 +59,16 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 	text-align:right;
     }
 </style>
+
+ 
+    <script type="text/javascript">
+    //this script for read more detail content of homepage
+		hs.graphicsDir = 'file_read_more/graphics/';
+		hs.outlineType = 'rounded-white';
+		hs.wrapperClassName = 'draggable-header';
+
+	</script>
+
 </head>
 <body  id="page_bg" onload="playPic(3000)">
 <a name="up" id="up"></a>
@@ -67,14 +79,14 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 				<div id="header_l">
 					<div id="header_r">
                     	
-						<!--<div id="logo"></div>-->
+						<div id="logo"></div>
 						<jdoc:include type="modules" name="top" />
                         
   <!--Language French and English===========================================-->
   							
                         	  <div id="language_en_fr"> <a href="index.php?lang=fr"> <img src="images/fr.png" style="width:40px;height:20px;"></a> 
-                              	<a href="index.php?lang=en"><img src="images/gb.png" style="width:40px;height:20px;"></a>
-                              	<a href="http://localhost/joomla/administrator/index.php" style="font-size:13px;color:#FFF;">Login</a>
+                              	<a href="index.php?lang=en"><img src="images/gb.png" style="width:40px;height:20px;" /></a>
+                              	<a href="http://www.abktours.com/administrator/" style="font-size:13px;color:#FFF;">Login</a>
                               </div>
                               
 						</div>
@@ -180,7 +192,7 @@ echo'
 							</tr>
                             <tr><td colspan="3">
                             <div style="width:100%;height:390px;background-color:#86B240;padding-top:25px;">
-      				<img src="image_slide/10.jpg" id="pic" style="width:80%;height:350px;border:solid #000 1px;" />
+      				<img src="image_slide/10.jpg" id="pic" style="width:80%;height:350px;border:solid #FFF 2px;" />
                                 
                                 
                                 
@@ -199,17 +211,15 @@ echo'
           {
               if (substr($image, 0, 1) != '.') 
               {
-                  $extension = substr($image, strrpos($image, '.')); // Gets the File Extension
+                  $extension = substr($image, strrpos($image, '.')); 
                   if($extension == ".jpg" || $extension == ".jpeg" || $extension == ".gif" |$extension == ".png")
-                  echo "<img src=\"images/image_slide/$image\" width=\"30\" height=\"30\" 
-                          onclick=\"currentPic('images/image_slide/$image')\"/>&nbsp;";
+                  echo "<img  src=\"images/image_slide/$image\"  width=\"30\" height=\"30\" 
+                          onclick=\"currentPic('images/image_slide/$image')\"  />&nbsp;";
               }
               
           }
          ?>                                            
-  </div>
-                                   
-                                
+  </div>     
 							</div>
                             
                             </td></tr>
@@ -231,12 +241,21 @@ echo'
            
                              
  						  <?php 	$db =& JFactory::getDBO();   
-                          	$query = "SELECT title,introtext FROM jos_content";
+                          	$query = "SELECT * FROM jos_content";
+                          	$i=0;
 							$db=mysql_query($query);
-							while(list($title,$text)=mysql_fetch_row($db))
+							while(list($id,$title,$alias,$t_alias,$text,$fulltext)=mysql_fetch_row($db))
 							{
+								$i+=1;
 								echo"<p><span>".$title."</span></p><br />";
-								echo "<div style='font-size:13px;color:#666;word-spacing:1px;line-height:18px;'>".$text."&nbsp;&nbsp;&nbsp;&nbsp;<a hret='' style='background:red;color:#fff' >Read More...</a></div><br />";
+								echo "<div style='font-size:13px;color:#666;word-spacing:1px;line-height:18px;'>".$text."&nbsp;&nbsp;&nbsp;&nbsp;
+									 <a href=\"file_read_more/home/home_read_more".$i.".html\" onclick=\"return hs.htmlExpand(this,{objectType:'ajax'})\" style='background:red;color:#fff' >Read More...</a></div><br />";
+								 
+								 $read_more = "file_read_more/home/home_read_more".$i.".html";
+								 $Handle = fopen($read_more, 'w');
+								 fwrite($Handle, "<br /><div style='border:double #FF0 4px;color:#FFF;background-color:#86B240'>
+								 <br /><p><span  style=\"border-buttom:double #F00 3px;color:#03C;font-size:14px;\">".$title."</span></p>".$fulltext."</div>");  
+								 fclose($Handle);
 								
 							}
 							 ?>
@@ -262,8 +281,8 @@ echo'
                                         	<td colspan="2">
                                             	<textarea cols="30" rows="5" name="Description"> </textarea>
                                             </td>
-                                         <tr><td><input type="button" value="Send" /></td></tr>
                                         </tr>
+                                        <tr><td><input type="button" value="Send" /></td></tr>
                                     </table>
                                     <br /><br />
                                     
@@ -319,10 +338,11 @@ echo'
         	<div id="footer" align="center"  style="color:#FFF;font-size:14px;" >
 							<br /><br /><br />
                              Address: #104Eo, Tnal Trang,Bakong, Siem Reap, Cambodia <br />
-							 Tel: +855 63963164<br />
 							 HP: +855 16836690<br />
-							 Fax: +855 63963164 +855 977817278 <br />
-							 Email: kymaye@hotmail.fr
+							 AMRIN: +855 16836690 <br />
+							 BUNNAREATH: +855 977817278<br />
+							 Fax/Tel: +855 63963164<br />
+							 Email: abktours@abktour.com
 			</div>
 		</div>
 	</div>
@@ -359,7 +379,7 @@ echo'
 <!--runner slide by get image from server-->
 
 <script>
-//// Get image from server for runner slide
+
 var time=null;
 var ad=null;
 
