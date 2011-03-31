@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component" version="1.5.0">
+ <name>abktours</name>
+ <!-- The following elements are optional and free of formatting constraints -->
+ <creationDate>2011-03-27</creationDate>
+ <author>John Doe</author>
+ <authorEmail>channkrissna@yahoo.com</authorEmail>
+ <authorUrl>www.abktours.com</authorUrl>
+ <copyright>Copyright Info</copyright>
+ <license>License Info</license>
+ <!--  The version string is recorded in the components table -->
+ <version>1.01</version>
+ <!-- The description is optional and defaults to the name -->
+ <description>Description of the component ...</description>
+ 
+ <!-- Site Main File Copy Section -->
+ <!-- Note the folder attribute: This attribute describes the folder
+      to copy FROM in the package to install therefore files copied
+      in this section are copied from /site/ in the package -->
+ <files folder="site">
+  <filename>admin.content.html.php</filename> 
+  <filename>admin.content.php</filename> 
+  <filename>controller.php</filename>
+  <filename>helper.php</filename>
+  <filename>index.html</filename>
+  <filename>toolbar.content.html.php</filename>
+  <filename>toolbar.content.php</filename>
+  <filename>views/index.html</filename>
+  <filename>views/element/index.html</filename>
+  <filename>views/element/view.php</filename>
+  <filename>models/element.php</filename>
+  <filename>models/article.xml</filename>
+  <filename>models/index.html</filename>
+  <filename>helper/content.php<filename>
+  <filename>helper/index.html</filename>
+  <filename>elements/article.php</filename>
+  <filename>elements/author.php</filename>
+  <filename>elements/index.html</filename>
+  
+
+  </files>
+ 
+ 
+ <administration>
+  <files folder="admin">
+      <filename>admin.content.html.php</filename> 
+	  <filename>admin.content.php</filename> 
+	  <filename>controller.php</filename>
+	  <filename>helper.php</filename>
+	  <filename>index.html</filename>
+	  <filename>toolbar.content.html.php</filename>
+	  <filename>toolbar.content.php</filename>
+	  <filename>views/index.html</filename>
+	  <filename>views/element/index.html</filename>
+	  <filename>views/element/view.php</filename>
+	  <filename>models/element.php</filename>
+	  <filename>models/article.xml</filename>
+	  <filename>models/index.html</filename>
+	  <filename>helper/content.php<filename>
+	  <filename>helper/index.html</filename>
+	  <filename>elements/article.php</filename>
+	  <filename>elements/author.php</filename>
+	  <filename>elements/index.html</filename>
+ </files>
+  <menu>ABK Tour</menu>
+ 
+  <!-- Administration Main File Copy Section -->
+ 
+ 
+ </administration>
+</install>

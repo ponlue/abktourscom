@@ -1,0 +1,207 @@
+/* Based partially on Matthew Carroll's keyboard accessible flavor of Suckerfish 
+ * Dropdowns by Patrick Griffiths and Dan Webb. 
+ * http://carroll.org.uk/sandbox/suckerfish/bones2.html
+ */
+
+/* ----[ LINKS ]----*/
+/* all menu links */
+#ptm-nav a, #subMenusContainer a{
+	text-decoration:none;
+	display:		block;
+	padding:		10px 14px 10px 12px;
+	font-size:		16px;
+	letter-spacing: -1px;
+	font-weight: 	bold;
+	margin-right:	2px;
+	
+	color:			#fff;
+	text-shadow: #555 0px 0px 3px;
+}
+
+#subMenusContainer a{
+	text-decoration:none;
+	display:		block;
+	padding:		10px 14px 10px 12px;
+}
+
+/* Just main menu links --[for non-javascript users this applies to submenu links as well]*/
+#ptm-nav a{
+	margin:	0;
+	float:	left;
+	margin-right:2px;
+}
+
+/* Just sub menu links */
+#subMenusContainer a, #ptm-nav li li a{
+	text-align:	left;
+	
+}
+
+/* All menu links on hover or focus */
+#ptm-nav a:hover,
+#ptm-nav a:focus,
+#subMenusContainer a:hover,
+#subMenusContainer a:focus,
+#ptm-nav a.mainMenuParentBtnFocused,
+#subMenusContainer a.subMenuParentBtnFocused {
+	color:				#fff;
+	margin-right:		2px;
+}
+
+/* sub menu links on hover or focus */
+#subMenusContainer a:hover, 
+#subMenusContainer a:focus, 
+#ptm-nav a.mainMenuParentBtnFocused, 
+#subMenusContainer a.subMenuParentBtnFocused,
+#ptm-nav li a:hover,
+#ptm-nav li a:focus{
+	color:				#fff;
+	margin-right:		2px;
+}
+
+/* Parent Sub Menu Links ---[javascript users only]*/
+.subMenuParentBtn{ 
+	background: url(../images/ptm/arrow_right.png) right center no-repeat;  
+}
+/* Parent Sub Menu Links on hover or focus ---[javascript users only]*/
+.subMenuParentBtnFocused{ 
+	background: url(../images/ptm/arrow_right_over.png) right center no-repeat;  
+}
+/* Parent Main Menu Links ---[javascript users only]*/
+.mainMenuParentBtn{	
+	 background: url(../images/ptm/arrow_down.png) right center no-repeat; 
+}
+/* Parent Main Menu Links on hover or focus ---[javascript users only]*/
+.mainMenuParentBtnFocused{	
+	background: url(../images/ptm/arrow_down_over.png) right center no-repeat; 
+}
+
+/* ----[ OLs ULs, LIs, and DIVs ]----*/
+/* Submenu Outer Wrapper - each submenu is inside a div with this class - javascript users only */
+/* the 2px left & right padding lets you have a 1px border 
+   on the ul or ol inside since overflow is set to hidden*/
+.smOW{ 
+	display:	none; 
+	position: 	absolute; 
+	overflow:	hidden; 
+	padding:	0 2px;
+	margin:		0 0 0 -2px;
+}
+
+/* All ULs and OLs */
+
+#ptm-nav,
+#ptm-nav ul,
+#ptm-nav ol,
+#subMenusContainer ul,
+#subMenusContainer ol { 
+	padding:	0;
+	margin:		0;
+	list-style: none;
+	line-height:26px;
+}
+
+/* All submenu OLs and ULs */
+/*border around submenu goes here*/	
+#ptm-nav ol,
+#ptm-nav ul,
+#subMenusContainer ul,
+#subMenusContainer ol {	
+	background:	#000;	
+	border:		1px solid #000;
+	left:		0;
+}
+
+/* List items in main menu --[for non-javascript users this applies to submenus as well]  */
+/*great place to use a background image as a divider*/
+#ptm-nav li { 
+	display:	block;
+	list-style:	none;
+	position:	relative;
+	float:		left;
+	padding:	0;
+	margin:		0;
+	
+}
+
+#subMenusContainer li{
+	list-style: none;
+	padding:	0;
+	margin:		0;
+
+}
+
+/* main menu ul or ol elment */
+#ptm-nav{
+	display:	block;
+	position: 	absolute;
+	list-style:	none;
+	margin:		0 0 0 0;
+	z-index:	5;
+	top:		80px;
+	text-align: center;
+	display:	block;
+	padding-left:2px;
+	/*background:	#f3f3f3 url(../images/bg-topmenu.png) 0 0 repeat-x;*/
+	/*background:	transparent url(../images/bg-sep.png) left center no-repeat;*/
+	width:		986px;
+}
+
+#subMenusContainer {
+	display:	block; 
+	position:	absolute;
+	top:		0;
+	left:		0;
+	width:		100%;
+	height:		0;
+	overflow:	visible;
+	z-index:	1000000000; 
+	}
+
+/* -----[ The below is just for non-javscript users ]-----------*/
+#ptm-nav li li {
+	float:	none;
+}
+
+/* Just submenu links*/	
+#ptm-nav li li a {
+	position:	relative;
+	float:		none;
+}
+
+/* second-level lists */
+/* using left instead of display to hide menus because display: none isn't read by screen readers */
+#ptm-nav li ul {
+	position: 	absolute;
+	width: 		10em;
+	margin-left:-1000em; 
+	margin-top:	36px;
+	font-size:	16px;
+}
+
+/* second-level lists */
+#ptm-nav li ul a {
+	font-size:	13px;
+}
+
+/* third-and-above-level lists */
+#ptm-nav li ul ul { margin: -26px 0 0 -1000em;}
+#ptm-nav li:hover ul ul,
+#ptm-nav li.sfhover ul ul { margin-left: -1000em;}
+
+/* lists nested under hovered list items */
+#ptm-nav li:hover ul,
+#ptm-nav li.sfhover ul		{ margin-left: 0;}
+#ptm-nav li li:hover ul 		{ margin-left: 10em; margin-top:-37px;}
+#ptm-nav li li.sfhover ul 	{ margin-left: 10em; margin-top:-35px;}
+
+/* extra positioning rules for limited noscript keyboard accessibility */
+#ptm-nav li a:focus + ul 			{ margin-left: 0; margin-top:36px;}
+#ptm-nav li li a:focus + ul 			{ left:0; margin-left: 1010em; margin-top:-36px;}
+#ptm-nav li li a:focus 				{ left:0; margin-left: 1000em; width:10em; margin-top:0;}
+#ptm-nav li li li a:focus 			{ left:0; margin-left: 2010em; width: 10em; margin-top:-26px;}
+#ptm-nav li:hover a:focus,
+#ptm-nav li.sfhover a:focus 		{ margin-left: 0;}
+
+#ptm-nav li li:hover a:focus + ul,
+#ptm-nav li li.sfhover a:focus + ul 	{ margin-left: 10em;}

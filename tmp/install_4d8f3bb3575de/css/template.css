@@ -1,0 +1,198 @@
+/* Phoca Template - www.phoca.cz */
+html {
+	margin:		0;
+	padding:	0;
+}
+body {
+	text-align: 	center;
+	font-size: 		76%;
+	font-family: 	Arial, sans-serif, Verdana, Helvetica;
+	line-height: 	1.3;
+	padding:		0;
+	margin:			0;
+}
+
+.phoca-in {
+	margin:10px;
+}
+
+/* Site */
+#phoca-site {
+	padding:	0;
+	margin:		0;
+}
+
+#phoca-wrap {
+	min-width: 	990px;
+	max-width: 	990px;
+	width: 		auto !important;
+	width: 		990px;
+	margin: 	0 auto;
+	text-align: left;
+	padding:	0;
+}
+
+#phoca-search {
+	float:		right;
+	margin-top: 7px;
+}
+
+#phoca-search input[type="text"] {
+	margin-left: 5px;
+}
+
+/* Header */
+#phoca-header {
+	position:		relative;
+	height:			140px;
+	margin-top:		0px;
+	margin-bottom:	0px;
+	padding:		0px;
+	margin-bottom:	10px;
+}
+
+#phoca-header #logo {
+	position:	absolute;
+	top:		8px;
+	left:		10px;
+	background:	transparent;
+}
+
+#phoca-header #logo .header-desc {
+	font-size: 		76%;
+}
+
+#phoca-header .banner {
+	position:	absolute;
+	top: 		8px;
+	right:		0px;
+	background:	transparent;
+}
+
+form#cse-search-box div input {
+	width:200px;
+}
+
+/* Top Menu */
+#phoca-topmenu {
+	padding:	0;
+	margin:		0;
+	background:	transparent;
+}
+
+/* Top */
+#phoca-top {
+	margin:0;
+	padding:0;
+}
+
+#phoca-middle {
+	margin: 10px 0px;
+}
+
+/* Side */
+#phoca-side1 {
+	position:	relative;
+	float:		left;
+	width:		23%;
+	overflow:	hidden;
+	margin:		0px;
+	padding:	0px;
+}
+
+#phoca-side2 {
+	position:	relative;
+	float:		left;
+	width:		23%;
+	overflow:	hidden;
+	margin:		0px;
+	padding:	0px;
+}
+
+#phoca-side1-bg {
+	margin:		0px;
+	padding:	0px;
+	background: transparent url(../images/sep.gif) 23% 0 repeat-y;
+}
+
+#phoca-side2-bg {
+	margin:		0px;
+	padding:	0px;
+	background: transparent url(../images/sep.gif) 76% 0 repeat-y;
+}
+
+/* Content */
+#breadcrumbs{
+	padding-top: 10px;
+}
+
+#phoca-content {
+	position:	relative;
+	float:		left;
+	width: 		53%;
+	padding:	0px;
+	margin:		0px;
+}
+
+#phoca-content1 {
+	position:	relative;
+	float:		left;
+	width: 		51%;
+	overflow:	hidden;
+	padding:	1%;
+	margin:		0px;
+}
+
+#phoca-content2 {
+	position:	relative;
+	float:		left;
+	width: 		74%;
+	overflow:	hidden;
+	padding:	1%;
+}
+#phoca-content3 {
+	position:	relative;
+	float:		left;
+	width: 		97%;
+	overflow:	hidden;
+	padding:	1%;
+	
+}
+
+/* User */
+#phoca-user {
+	clear:both;
+	padding:5px 15px 5px 0px;
+}
+
+/* Botom */
+#phoca-bottom {
+	margin: 10px 0px;
+    overflow:hidden;
+}
+
+/* Footer */
+#phoca-clr{
+	clear:		both;
+	padding:	0;
+	margin:		0;
+}
+
+#phoca-footer {
+	height:		50px;
+	min-width: 	990px;
+	max-width: 	990px;
+	width: 		auto !important;
+	width: 		990px;
+	margin: 	0 auto;
+	padding:	0;
+}
+#phoca-footer .phoca-footer {
+	text-align:	center;
+	margin:		0;
+}
+
+#phoca-debug {
+	padding:	0px;
+	margin:		0px;
+}

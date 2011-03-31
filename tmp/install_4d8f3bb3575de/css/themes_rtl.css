@@ -1,0 +1,25 @@
+/* Phoca Template - www.phoca.cz */
+
+
+#phoca-middle ul li{
+	background: transparent url(../images/li_rtl.png) 100% 1px no-repeat;
+	padding-right: 20px;
+	padding-left: 0px;
+}
+
+#phoca-middle ul.menu li.active {
+	background: transparent url(../images/lia_rtl.png) 100% 1px no-repeat;
+	padding-right: 20px;
+	padding-left: 0px;
+}
+
+.panel h3.pane-toggler a {
+	background:transparent url(../images/plus.png) 1%  center no-repeat;
+	color: #fff;
+}
+.panel h3.pane-toggler-down a {
+	background:transparent  url(../images/minus.png) 1%  center no-repeat;
+	border-bottom:	solid 1px #fff;
+	color: #fff;
+}
+

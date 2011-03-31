@@ -1,0 +1,33 @@
+#phoca-side2 {
+	margin-right:-5px;
+}
+#phoca-side1-bg {
+	float:left;
+	width:100%;
+}
+
+#phoca-side2-bg {
+	float:left;
+	width:100%;
+	margin:0;padding:0;
+}
+
+#phoca-footer {
+	float:left;
+	width:100%;
+	margin:0;padding:0;
+}
+
+#phoca-top .moduletable h3 {
+	margin-top:0;
+	padding-top:0;
+}
+
+#phoca-topmenu {
+	margin-top:0;
+}
+
+#phoca-topmenu ul {
+	padding: 0;
+	margin:0;
+}

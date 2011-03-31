@@ -1,0 +1,120 @@
+/* Phoca Template - www.phoca.cz */
+
+body {
+	color: #b9c1d0;
+}
+#phoca-site {
+	background: transparent url(images/bg.png) 0 0;
+}
+
+#phoca-side1-bg {
+	background: transparent url(images/sep.gif) 23% 0 repeat-y;
+}
+
+#phoca-side2-bg {
+	background: transparent url(images/sep.gif) 76% 0 repeat-y;
+}
+
+h1, h2, h3, h4, h5, h6
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: #fff;
+}
+
+#phoca-bottom {
+	background: #112246;
+}
+
+#phoca-middle ul li{
+	background: transparent url(images/li.png) 0 1px no-repeat;
+}
+
+ul {
+	/*list-style: none;*/
+	padding:	0em;
+	margin-left:1.5em;
+}
+
+hr 	{border:1px solid #FF9999;}
+
+#phoca-search input[type="text"] {
+	border: 3px solid #fff;
+	background:#b9c1d0;
+}
+.inputbox,
+#textarea {
+	border: 3px solid #fff;
+	background:#b9c1d0;
+}
+select,
+input[type="password"],
+input[type="text"] {
+	border: 3px solid #fff;
+	background:#b9c1d0;
+}
+
+div.moduletable {
+	background: #112246;
+}
+
+#phoca-middle .pagenav-prev a,
+#phoca-middle .pagenav-next a,
+#phoca-middle .readmore a {
+	
+	background: #fff;
+	color: #112246;
+	-moz-box-shadow: 0px 0px 3px 0px #aaa;
+	-webkit-box-shadow: 0px 0px 3px 0px #aaa;
+	box-shadow: 0px 0px 3px 0px #aaa;
+}
+
+#phoca-middle ul.menu li.active {
+	background: transparent url(images/lia.png) 0 1px no-repeat;
+}
+
+fieldset.userdata {
+	border: none;
+	background: #112246;
+}
+
+
+/* Top Menu */
+#ptm-nav{
+	border: 		1px solid #364564;
+	border-top: 	1px solid #344e86;
+	border-bottom: 	1px solid #344e86;
+	background:		#364564;	
+}
+
+#ptm-nav ol,
+#ptm-nav ul,
+#subMenusContainer ul,
+#subMenusContainer ol {	
+	background:		#364564;	
+	border:			1px solid #364564;
+}
+
+#ptm-nav li {
+	border-right: 1px solid #344e86;
+}
+/* End Top Menu*/
+
+.panel h3.pane-toggler a {
+	background: #b9c1d0 url(images/plus.png) 99%  center no-repeat;
+	color: #fff;
+}
+.panel h3.pane-toggler-down a {
+	background: #b9c1d0  url(images/minus.png) 99%  center no-repeat;
+	border-bottom:	solid 1px #fff;
+	color: #fff;
+}
+
+.panel h3 a {
+	color:				#112246;
+}
+
+
+table.category th,
+table.category th a{
+	color:				#112246;
+}
+

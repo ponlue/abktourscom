@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Simple Upload Joomla 1.5</name>
+	<author>Ribamar FS</author>
+	<creationDate>31 de Janeiro de 2009</creationDate>
+	<copyright>(C) 2005 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>ribafs@gmail.com</authorEmail>
+	<authorUrl>http://ribafs.net</authorUrl>
+	<version>1.0.0</version>
+	<description>Simple Upload Joomla 1.5 - 
+		This module upload files to server for user.
+		Give access to your selected users.
+		Make a directory 'upload' in root of Joomla with write permission.
+		Ribamar FS - http://ribafs.net
+	</description>
+	<files>
+		<filename module="mod_upload">mod_upload.php</filename>
+	</files>
+</install>

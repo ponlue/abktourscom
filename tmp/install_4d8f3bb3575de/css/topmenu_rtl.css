@@ -1,0 +1,213 @@
+/* Based partially on Matthew Carroll's keyboard accessible flavor of Suckerfish 
+ * Dropdowns by Patrick Griffiths and Dan Webb. 
+ * http://carroll.org.uk/sandbox/suckerfish/bones2.html
+ */
+
+/* ----[ LINKS ]----*/
+/* all menu links */
+#ptm-nav a, #subMenusContainer a{
+	text-decoration:none;
+	display:		block;
+	padding:		10px 12px 10px 14px;
+	font-size:		16px;
+	letter-spacing: -1px;
+	font-weight: 	bold;
+	margin-left:	2px;
+	margin-right:	0px;
+	
+	color:			#fff;
+	text-shadow: #555 0px 0px 3px;
+}
+
+#subMenusContainer a{
+	text-decoration:none;
+	display:		block;
+	padding:		10px 12px 10px 14px;
+}
+
+/* Just main menu links --[for non-javascript users this applies to submenu links as well]*/
+#ptm-nav a{
+	margin:	0;
+	float:	right;
+	margin-left:2px;
+	margin-right:	0px;
+}
+
+/* Just sub menu links */
+#subMenusContainer a, #ptm-nav li li a{
+	text-align:	right;
+
+}
+
+/* All menu links on hover or focus */
+#ptm-nav a:hover,
+#ptm-nav a:focus,
+#subMenusContainer a:hover,
+#subMenusContainer a:focus,
+#ptm-nav a.mainMenuParentBtnFocused,
+#subMenusContainer a.subMenuParentBtnFocused {
+	color:				#fff;
+	margin-left:2px;
+	margin-right:	0px;
+}
+
+/* sub menu links on hover or focus */
+#subMenusContainer a:hover, 
+#subMenusContainer a:focus, 
+#ptm-nav a.mainMenuParentBtnFocused, 
+#subMenusContainer a.subMenuParentBtnFocused,
+#ptm-nav li a:hover,
+#ptm-nav li a:focus{
+	color:				#fff;
+	margin-left:2px;
+	margin-right:	0px;
+}
+
+/* Parent Sub Menu Links ---[javascript users only]*/
+.subMenuParentBtn{ 
+	background: url(../images/ptm/arrow_left.png) left center no-repeat;  
+}
+/* Parent Sub Menu Links on hover or focus ---[javascript users only]*/
+.subMenuParentBtnFocused{ 
+	background: url(../images/ptm/arrow_left_over.png) left center no-repeat;  
+}
+/* Parent Main Menu Links ---[javascript users only]*/
+.mainMenuParentBtn{	
+	 background: url(../images/ptm/arrow_down_rtl.png) left center no-repeat; 
+}
+/* Parent Main Menu Links on hover or focus ---[javascript users only]*/
+.mainMenuParentBtnFocused{	
+	background: url(../images/ptm/arrow_down_over_rtl.png) left center no-repeat; 
+}
+
+/* ----[ OLs ULs, LIs, and DIVs ]----*/
+/* Submenu Outer Wrapper - each submenu is inside a div with this class - javascript users only */
+/* the 2px right & left padding lets you have a 1px border 
+   on the ul or ol inside since overflow is set to hidden*/
+.smOW{ 
+	display:	none; 
+	position: 	absolute; 
+	overflow:	hidden; 
+	padding:	0 2px;
+	margin:		0 -2px 0 0;
+}
+
+/* All ULs and OLs */
+
+#ptm-nav,
+#ptm-nav ul,
+#ptm-nav ol,
+#subMenusContainer ul,
+#subMenusContainer ol { 
+	padding:	0;
+	margin:		0;
+	list-style: none;
+	line-height:26px;
+	
+}
+
+/* All submenu OLs and ULs */
+/*border around submenu goes here*/	
+#ptm-nav ol,
+#ptm-nav ul,
+#subMenusContainer ul,
+#subMenusContainer ol {	
+	background:	#000;	
+	border:		1px solid #000;
+	right:		0;
+}
+
+/* List items in main menu --[for non-javascript users this applies to submenus as well]  */
+/*great place to use a background image as a divider*/
+#ptm-nav li { 
+	display:	block;
+	list-style:	none;
+	position:	relative;
+	float:		right;
+	padding:	0;
+	
+}
+
+#subMenusContainer li{
+	list-style: none;
+	padding:	0;
+	margin:		0;
+
+}
+
+/* main menu ul or ol elment */
+#ptm-nav{
+	display:	block;
+	position: 	absolute;
+	list-style:	none;
+	margin:		0 0 0 0;
+	z-index:	5;
+	top:		80px;
+	text-align: center;
+	display:	block;
+	font-size:	13px;
+	padding-right:2px;
+	padding-left:	0px;
+	/*background:	#f3f3f3 url(../images/bg-topmenu.png) 0 0 repeat-x;*/
+	/*background:	transparent url(../images/bg-sep.png) right center no-repeat;*/
+	width:		986px;	
+}
+
+#subMenusContainer {
+	display:	block; 
+	position:	absolute;
+	top:		0;
+	right:		0;
+	width:		100%;
+	height:		0;
+	overflow:	visible;
+	z-index:	1000000000; 
+	}
+
+/* -----[ The below is just for non-javscript users ]-----------*/
+#ptm-nav li li {
+	float:	none;
+}
+
+/* Just submenu links*/	
+#ptm-nav li li a {
+	position:	relative;
+	float:		none;
+}
+
+/* second-level lists */
+/* using right instead of display to hide menus because display: none isn't read by screen readers */
+#ptm-nav li ul {
+	position: 	absolute;
+	width: 		10em;
+	margin-right:-1000em; 
+	margin-top:	36px;
+	font-size:	16px;
+}
+
+/* second-level lists */
+#ptm-nav li ul a {
+	font-size:	13px;
+}
+
+/* third-and-above-level lists */
+#ptm-nav li ul ul { margin: -16px 0 0 -1000em;}
+#ptm-nav li:hover ul ul,
+#ptm-nav li.sfhover ul ul { margin-right: -1000em; margin-left: 0;}
+
+/* lists nested under hovered list items */
+#ptm-nav li:hover ul,
+#ptm-nav li.sfhover ul		{ margin-right: 0;}
+#ptm-nav li li:hover ul 		{ margin-right: 10em; margin-left: 0; margin-top:-37px;}
+#ptm-nav li li.sfhover ul 	{ margin-right: 10em; margin-left: 0; margin-top:-35px;}
+
+/* extra positioning rules for limited noscript keyboard accessibility */
+#ptm-nav li a:focus + ul 			{ margin-right: 0; margin-top:36px;}
+#ptm-nav li li a:focus + ul 			{ right:0; margin-right: 1010em; margin-left: 0; margin-top:-36px;}
+#ptm-nav li li a:focus 				{ right:0; margin-right: 1000em; margin-left: 0; width:10em; margin-top:0;}
+#ptm-nav li li li a:focus 			{ right:0; margin-right: 2010em; margin-left: 0; width: 10em; margin-top:-16px;}
+#ptm-nav li:hover a:focus,
+#ptm-nav li.sfhover a:focus 		{ margin-right: 0;}
+
+#ptm-nav li li:hover a:focus + ul,
+#ptm-nav li li.sfhover a:focus + ul 	{ margin-right: 10em; margin-left: 0;}

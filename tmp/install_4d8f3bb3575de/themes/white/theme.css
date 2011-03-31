@@ -1,0 +1,179 @@
+/* Phoca Template - www.phoca.cz */
+
+body {
+	color: #777;
+}
+#phoca-site {
+	background: transparent url(images/bg.png) 0 0;
+}
+
+#phoca-side1-bg {
+	background: transparent url(images/sep.gif) 23% 0 repeat-y;
+}
+
+#phoca-side2-bg {
+	background: transparent url(images/sep.gif) 76% 0 repeat-y;
+}
+
+h1, h2, h3, h4, h5, h6
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: #777;
+}
+
+/*specific white*/
+h1, h2, h3, h4, h5, h6
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.contentheading, .componentheading, .contentpagetitle,
+.contentheading a, .componentheading a, .contentpagetitle a  {
+	text-decoration: none;
+	color: #777;
+}
+
+h2, .contentheading, .componentheading, .contentpagetitle {
+	text-shadow: #fff 0px 0px 4px;
+}
+
+h3,
+div.module h3,
+div.module h2,
+div.moduletable h3,
+div.moduletable h2  {
+	text-shadow: #fff 0px 0px 3px;
+}
+
+div.moduletable h3,
+div.moduletable h2  {
+	color: #fff;
+	text-shadow: #000 0px 0px 3px;
+}
+
+a {
+	color: #000;
+}
+
+a:link 		{color: 	#000;}
+a:hover		{color: 	#000;}
+a:visited	{color: 	#000;}
+
+#phoca-header #logo .header-desc {
+	color: 		#777;
+}
+
+#phoca-bottom {
+	color: 		#777;
+}
+
+#phoca-footer .phoca-footer {
+	color: 		#777;
+}
+
+ul  li{
+	color: #777;
+	background: transparent;
+}
+
+div.module ul li,
+div.moduletable ul li {
+	color: 	#777;
+}
+
+
+#phoca-bottom {
+	background: #777;
+}
+
+#phoca-middle ul li{
+	background: transparent url(images/li.png) 0 1px no-repeat;
+}
+
+ul {
+	/*list-style: none;*/
+	padding:	0em;
+	margin-left:1.5em;
+}
+
+hr 	{border:1px solid #ffed99;}
+
+#phoca-search input[type="text"] {
+	border: 3px solid #777;
+	background:#fff;
+}
+.inputbox,
+#textarea {
+	border: 3px solid #777;
+	background:#fff;
+}
+select,
+input[type="password"],
+input[type="text"] {
+	border: 3px solid #777;
+	background:#fff;
+}
+
+div.moduletable {
+	background: #777;
+	color: #fff;
+}
+
+#phoca-middle .pagenav-prev a,
+#phoca-middle .pagenav-next a,
+#phoca-middle .readmore a {
+	
+	background: #777;
+	color: #fff;
+	-moz-box-shadow: 0px 0px 3px 0px #aaa;
+	-webkit-box-shadow: 0px 0px 3px 0px #aaa;
+	box-shadow: 0px 0px 3px 0px #aaa;
+}
+
+#phoca-middle ul.menu li.active {
+	background: transparent url(images/lia.png) 0 1px no-repeat;
+}
+
+fieldset.userdata {
+	border: none;
+	background: #777;
+}
+
+
+/* Top Menu */
+#ptm-nav{
+	border: 		1px solid #fff;
+	border-top: 	1px solid #fff;
+	border-bottom: 	1px solid #fff;
+	background:		#777;	
+}
+
+#ptm-nav ol,
+#ptm-nav ul,
+#subMenusContainer ul,
+#subMenusContainer ol {	
+	background:		#777;	
+	border:			1px solid #fff;
+}
+
+#ptm-nav li {
+	border-right: 1px solid #fff;
+}
+/* End Top Menu*/
+
+.panel h3.pane-toggler a {
+	background: #fff url(images/plus.png) 99%  center no-repeat;
+	color: #777;
+}
+.panel h3.pane-toggler-down a {
+	background: #fff  url(images/minus.png) 99%  center no-repeat;
+	border-bottom:	solid 1px #777;
+	color: #777;
+}
+
+.panel h3 a {
+	color:				#777;
+}
+
+
+table.category th,
+table.category th a{
+	color:				#777;
+}
+

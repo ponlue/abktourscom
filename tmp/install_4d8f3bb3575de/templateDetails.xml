@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="1.6" type="template" client="site">
+	<name>phoca_color</name>
+	<creationDate>24/02/2011</creationDate>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<authorEmail></authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<copyright>Jan Pavelka</copyright>
+	<license>GNU/GPL</license>
+	<version>1.0.1</version>
+	<description>TPL_PHOCA_COLOR_XML_DESCRIPTION</description>
+
+	<files>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>javascript</folder>
+		<folder>fonts</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>themes</folder>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>component.php</filename>
+		<filename>templates.php</filename>
+	</files>
+
+	<positions>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+		<position>position-16</position>
+	</positions>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_phoca_color.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_phoca_color.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="advanced" addfieldpath="/templates/phoca_color/models/fields">
+			
+				<field name="color_theme" type="list" default="red" label="TPL_PHOCA_COLOR_FIELD_COLOR_THEME_LABEL" description="TPL_PHOCA_COLOR_FIELD_COLOR_THEME_DESC">
+					<option value="red">TPL_PHOCA_COLOR_RED</option>
+					<option value="green">TPL_PHOCA_COLOR_GREEN</option>
+					<option value="blue">TPL_PHOCA_COLOR_BLUE</option>
+					<option value="yellow">TPL_PHOCA_COLOR_YELLOW</option>
+					<option value="white">TPL_PHOCA_COLOR_WHITE</option>
+				</field>
+			
+				<field name="display_logo" type="list" default="1" label="TPL_PHOCA_COLOR_FIELD_DISPLAY_LOGO_LABEL" description="TPL_PHOCA_COLOR_FIELD_DISPLAY_LOGO_DESC">
+					<option value="0">TPL_PHOCA_COLOR_NO</option>
+					<option value="1">TPL_PHOCA_COLOR_YES</option>
+				</field>
+			
+				<field name="logo" type="phocamedia"
+					default="templates/phoca_color/images/logo.png" directoryimg="1"
+					label="TPL_PHOCA_COLOR_FIELD_LOGO_LABEL" description="TPL_PHOCA_COLOR_FIELD_LOGO_DESC" />
+					
+
+				<field name="sitetitle"  type="text" default=""
+					label="TPL_PHOCA_COLOR_FIELD_SITETITLE_LABEL"
+					description="TPL_PHOCA_COLOR_FIELD_SITETITLE_DESC"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="TPL_PHOCA_COLOR_FIELD_DESCRIPTION_LABEL"
+					description="TPL_PHOCA_COLOR_FIELD_DESCRIPTION_DESC"
+					filter="string" />
+					
+					
+				<field name="display_slideshow" type="list" default="0" label="TPL_PHOCA_COLOR_FIELD_DISPLAY_SLIDESHOW_LABEL" description="TPL_PHOCA_COLOR_FIELD_DISPLAY_SLIDESHOW_DESC">
+					<option value="0">TPL_PHOCA_COLOR_NO</option>
+					<option value="1">TPL_PHOCA_COLOR_YES</option>
+				</field>
+					
+					<field name="slideshow" type="phocamedia"
+					default="templates/phoca_color/images/img.jpg" directoryimg="1"
+					label="TPL_PHOCA_COLOR_FIELD_SLIDESHOW_LABEL" description="TPL_PHOCA_COLOR_FIELD_SLIDESHOW_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>

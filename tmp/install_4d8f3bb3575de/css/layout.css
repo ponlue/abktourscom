@@ -1,0 +1,542 @@
+/* Phoca Template - www.phoca.cz */
+
+h1,h2,h3,h4,h5,h6,blockquote,label,ol,dl,fieldset,address, p {
+	margin:		0.5em 0;
+	padding:	0;
+}
+
+h1, h2, h3, h4, h5, h6
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.contentheading, .componentheading, .contentpagetitle,
+.contentheading a, .componentheading a, .contentpagetitle a  {
+	text-decoration: none;
+	color: #fff;
+}
+
+h1	{font-size:	1.4em}
+h2	{font-size: 1.3em;}
+h3  	{font-size: 1.2em;}
+h4 	{font-size: 1.1em;}
+h5 	{font-size: 1.1em;}
+h6 	{font-size: 1em;}
+
+h2, .contentheading, .componentheading, .contentpagetitle {
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	font-weight: bold;
+	letter-spacing: -2px;
+	font-size: 210%;
+	text-shadow: #555 0px 0px 4px;
+}
+
+h3,
+div.module h3,
+div.module h2,
+div.moduletable h3,
+div.moduletable h2  {
+	font-family: Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	font-weight: bold;
+	letter-spacing: -1px;
+	font-size:160%;
+	text-shadow: #555 0px 0px 3px;
+}
+
+div.moduletable h3,
+div.moduletable h2  {
+	text-shadow: #000 0px 0px 2px;
+}
+
+hr 	{}
+
+fieldset {
+	padding: 0.5em;
+	border: 0px;
+}
+
+form {
+	margin: 	0;
+	padding: 	0;
+}
+
+img a{
+	border: 	0px;
+}
+
+ul {
+	padding:	0em;
+	margin-left:1.5em;
+}
+ul  li{
+	list-style: disc;
+	background: transparent;
+}
+
+ol li {}
+
+td {
+	padding:1px;
+}
+
+a img {
+	border: 0px;
+}
+
+img.border {
+	border: 3px solid #fff;
+}
+
+#phoca-footer, 
+.small, 
+.createdate, 
+.modifydate {
+	font-size:	0.8em;
+}
+
+.pagination span, 
+.pagination a, 
+.pagination strong {
+	margin:		0 3px;
+}
+
+.pagination {
+	text-align: center;
+}
+
+.display-limit{
+	text-align: center;
+}
+
+.items-more {
+	margin-left: 20px;
+}
+
+.article-info {
+    margin:		10px 0 10px 0px;
+    font-size:	0.9em;
+}
+
+.article-info-term {
+    display:	none;
+}
+
+dt.category-name,
+dt.create,
+dt.modified,
+dt.createdby {
+    float:			left;
+    padding-right:	5px;
+}
+
+.archive .article-info dd,
+.article-info dd {
+    margin:			2px 0 0px 0;
+    line-height:	1.2em
+}
+
+dd.createdby {}
+
+.article-info dd span {
+    text-transform:	none;
+    display:		inline-block;
+    padding:		0 5px 0 0px;
+    margin:			0 10px 0 0px;
+}
+
+
+
+
+
+
+
+table.category {
+	border-collapse: 	collapse;
+	border: 			2px solid #fff;
+}
+
+table.category th{
+	border-collapse: 	collapse;
+	border: 			2px solid #fff;
+	background: 		#fff;
+	padding: 			10px;
+}
+table.category td{
+	border-collapse: 	collapse;
+	border: 			2px solid #fff;
+	padding: 			10px;
+}
+
+.panel {
+	border:				solid 1px #fff;
+	margin-top:			-1px;
+}
+
+.panel h3 a {
+	display:			block;
+	padding:			6px;
+	text-decoration:	none;
+	padding:			6px;
+}
+
+
+
+.pane-slider {
+	border:		solid 0px;
+	padding:	0px 10px !important;
+	margin:		0;
+	background: transparent;
+}
+
+div.current{
+	background: #fff;
+	margin: 5px;
+}
+
+#system-message dd.error.message ul li{
+	color:#de7a7b;
+	list-style-type: none;
+	background: transparent
+}
+#system-message ul li{
+	list-style-type: none;
+	background: transparent
+}
+
+
+
+
+.panel .contact-form,
+.panel  .contact-miscinfo {
+	padding:	10px;
+}
+
+.contact .panel .contact-form form,
+.contact .panel .contact-address {
+	margin:		20px 0 0 0;
+}
+
+.pane-slider.content.pane-down {
+	margin-top: 5px;
+}
+
+
+fieldset.only label,
+fieldset.phrases label {
+    margin:		0 10px 0 0px
+}
+
+.ordering-box label.ordering {
+    margin:		0 10px 5px 0;
+    float:		left
+}
+
+.contact-email div {
+    padding:	2px 0;
+    margin:		0 0 10px 0;
+}
+
+.contact-email label {
+    width:		17em;
+    float:		left;
+}
+
+.login-fields {
+    margin:		10px 0;
+}
+
+.login-fields label {
+    float:		left;
+    width:		9em;
+}
+
+.login-description img,
+.logout-description img {
+    float:			left;
+    margin-right:	20px;
+}
+
+.login-description,
+.logout-description {
+    overflow:		hidden;
+    padding-left:	5px;
+    margin:			20px 0 10px 0;
+}
+
+.logout-description {
+    margin-bottom:	20px;
+}
+
+.blog-featured {
+	padding: 	0;
+}
+
+.items-leading {
+	padding:		0px 5px 10px 5px;
+	overflow:		hidden;
+	margin-bottom:	10px;
+}
+
+.row-separator {
+	display: 	block;
+	clear: 		both;
+	margin: 	0;
+	border: 	0px;
+	height:		1px;
+}
+
+.item-separator {
+	display: 	none;
+	margin: 	0px;
+}
+
+.shownocolumns {
+    width:		98% !important;
+}
+
+.cols-1 {
+	display: 	block;
+	float: 		none !important;
+	margin: 	0 !important;
+}
+
+.cols-2 .column-1 {
+	width:		46%;
+	float:		left;
+}
+
+.cols-2 .column-2 {
+	width:		46%;
+	float:		right;
+	margin:		0;
+}
+
+.cols-3 .column-1 {
+	float:			left;
+	width:			29%;
+	padding:		0px 5px;
+	margin-right:	4%;
+}
+
+.cols-3 .column-2 {
+	float:			left;
+	width:			29%;
+	margin-left:	0;
+	padding:		0px 5px;
+}
+.cols-3 .column-3 {
+	float:			right;
+	width:			29%;
+	padding:		0px 5px;
+}
+
+.items-row {
+	overflow:		hidden;
+	margin-bottom:	10px !important;
+}
+
+.column-1,
+.column-2,
+.column-3 {
+    padding:		10px 5px;
+}
+
+.column-2 {
+	width:			55%;
+	margin-left:	40%;
+}
+
+.column-3 {
+    width:			30%
+}
+
+.blog-more{
+    padding:	10px 5px;
+}
+
+#phoca-bottom {margin: 0;padding:0;overflow:hidden;padding: 0px 10px 10px 10px;}
+
+#phoca-bottom .moduletable {
+	padding:	1px;
+}
+
+#phoca-bottom.bottomwidth.w99 .moduletable {width: 100%;}
+#phoca-bottom.bottomwidth.w49 .moduletable {width: 49.2%; float:left;}
+#phoca-bottom.bottomwidth.w33 .moduletable {width: 32.8%; float:left;}
+
+
+fieldset.userdata {
+	padding: 		5px;
+}
+
+/* Modules */
+div.module {}
+div.module h3 {
+	margin-top: 10px;
+}
+
+#phoca-bottom div.module h3,
+#phoca-bottom div.moduletable h3,
+#phoca-bottom div.moduletable h2 {
+	
+}
+
+div.moduletable {
+	padding: 10px;
+}
+div.moduletable h3,
+div.moduletable h2 {
+	margin-top: 10px;
+}
+
+div.module ul li,
+div.moduletable ul li {
+	list-style: disc;
+}
+
+.module input[type="password"],
+.module input[type="text"] {
+	display: block;
+}
+
+
+/* Phoca Middle */
+#phoca-middle ul li {
+	list-style: 	none;
+}
+
+#phoca-middle ul li{
+	list-style: 	none;
+	padding-left: 	20px;
+}
+
+#phoca-middle ul.menu li.active {
+	list-style: 	none;
+	padding-left: 	20px;
+}
+
+#phoca-middle .pagenav-next,
+#phoca-middle .pagenav-prev,
+#phoca-middle .readmore {
+	margin: 10px 0px;
+}
+
+#phoca-middle .pagenav-next {
+	float: right;
+}
+
+#phoca-middle ul.pagenav {
+	margin: 0px;
+	padding: 0px;
+}
+
+#phoca-middle .pagenav-prev {
+	float: left;
+}
+
+#phoca-middle ul.actions {
+	text-align:right;
+	padding:0 ;
+	width:100%;
+	margin:0;
+}
+
+#phoca-middle ul.actions li {
+	display:	inline;
+	margin:0;
+	padding:0;
+}
+
+#phoca-middle ul.actions a {
+    text-decoration:	none;
+}
+
+#phoca-middle .pagenav-prev,
+#phoca-middle .pagenav-next {
+	padding-left: 	0px;
+	padding-right: 	0px;
+}
+
+#phoca-middle .pagenav-prev a,
+#phoca-middle .pagenav-next a,
+#phoca-middle .readmore a {
+	padding:			5px;
+	font-weight:	 	bold;
+	text-decoration: 	none;
+}
+
+#phoca-middle .contact .panel h3 {
+	margin:		0px 0 0px 0;
+	padding: 	0;
+	border:		0;
+}
+
+/* Colors */
+#phoca-middle .contact .panel h3 {
+	background:#fff;
+}
+
+#phoca-slideshow {
+	background: #fff;
+	border: solid 10px #fff;
+}
+
+#phoca-header #logo .header-desc {
+	color: 		#fff;
+}
+
+#phoca-bottom {
+	color: 		#fff;
+}
+
+#phoca-footer .phoca-footer {
+	color: 		#fff;
+}
+
+a {
+	color: #fff;
+}
+
+a:link 		{color: 	#fff;}
+a:hover		{color: 	#fff;}
+a:visited	{color: 	#fff;}
+
+ul.pagenav li {
+	list-style: none;
+	background: transparent;
+}
+
+#phoca-middle ul.actions li{
+	list-style: none;
+	background: transparent;
+}
+
+ul  li{
+	color: #fff;
+	background: transparent;
+}
+
+div.module ul li,
+div.moduletable ul li {
+	color: 	#fff;
+}
+
+/* Specific CSS */
+/* Phoca Download */
+#phoca-dl-category-box div.tl div,
+#phoca-dl-categories-box div.tl div{
+	color: #777;
+}
+.pdfile {
+	color: #777;
+}
+/* Phoca Guestbook*/
+#pg-guestbook input[type="password"],
+#pg-guestbook input[type="text"] {
+	border: 3px solid #fff;
+}
+
+
+
+
+
+

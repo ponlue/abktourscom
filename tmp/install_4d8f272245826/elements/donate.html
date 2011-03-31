@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>Donate - Simple File Upload</title>
+		<style>
+		<!--
+		body, div{
+			font-family: Helvetica,Arial,sans-serif;
+			font-size: 12px;
+			color: #333;
+			line-height: 1.3em;
+		}
+
+		.mainbox {
+			position:absolute;
+			left:30px;
+			top:30px;
+			border:ridge 3px #ccffff;
+			background:#eeeeee;
+			font:11px, "Arial";
+			color:#333399;
+			height:310px;
+			width:340px;
+			z-index:4;
+			padding:15px;
+			margin-bottom:10px;
+		}
+		-->
+		</style>
+	</head>
+	<body>
+		<div class="mainbox">
+			Hi,<br />
+			thanks for showing intrest in Simple File Upload for Joomla built by Anders Was&#233;n.<br /><br />
+			
+			I figured it was time to give something back to the the Joomla community (in code this time, not donations).<br />
+			I would like to be able to continue working on extending this module and make new ones I have been thinking
+			of and therefore every buck is very much appreciated... if nothing else than to show the wife that my time
+			infront of the computer can pay off, atleast with an ice-cream or two, now and again... ;)<br /><br />
+			
+			If you have come this far, you are concidering a donation, I guess (ohh, I'm exited!), or you are just trying
+			to figure out how to make your own donate page... ;)<br /><br />
+			
+			With that said, please feel free (but not obligated) to give a donation using below button...<br />
+			
+			<br />
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick">
+				<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+				<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+				<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				<br />Just hit the button!
+			</form>
+		</div>
+	</body>
+</html>
