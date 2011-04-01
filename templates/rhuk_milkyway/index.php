@@ -241,10 +241,10 @@ echo'
            
                              
  						  <?php 	$db =& JFactory::getDBO();   
-                          	$query = "SELECT * FROM jos_content";
+                          	$query = "SELECT title,introtext,`fulltext` FROM jos_content as con,jos_content_frontpage as confp where con.id=confp.content_id";
                           	$i=0;
 							$db=mysql_query($query);
-							while(list($id,$title,$alias,$t_alias,$text,$fulltext)=mysql_fetch_row($db))
+							while(list($title,$text,$fulltext)=mysql_fetch_row($db))
 							{
 								$i+=1;
 								echo"<p><span>".$title."</span></p><br />";
@@ -305,8 +305,7 @@ echo'
 														{
 															$i=$i+1;
 															$im=$im."<td style='padding:3px;'>
-															<img src=\"images/Lan_of_wonder/$image\" 
-															width='120' height='70' /></td>";
+															<a href=\"#\"><img src=\"images/Lan_of_wonder/$image\" width='120' height='70' /></a></td>";
 															if ($i==2){$i=0;echo "<tr>".$im."</tr>";$im="";}
 														}
 													}
@@ -363,13 +362,13 @@ echo'
                     {
                         $extension = substr($image, strrpos($image, '.')); // Gets the File Extension
                         if($extension == ".jpg" || $extension == ".jpeg" || $extension == ".gif" |$extension == ".png")
-                        echo "<img src=\"images/Cambodia_Photos/$image\" width='70' height='70' />&nbsp;&nbsp;";
+                        echo "<a href=\"#\"><img src=\"images/Cambodia_Photos/$image\" width='70' height='70' />&nbsp;&nbsp;</a>";
                     } 
                 }
         ?>
         
   </div> 
-                        </center>  
+                  
 
 
 
